@@ -1,0 +1,25 @@
+db = QSqlDatabase.addDatabase("QPSQL");
+db.setDatabaseName(uri.database())
+db.setPort(int(uri.port()))
+db.setUserName(uri.username())
+db.setPassword(uri.password())
+db.open()
+# query the table
+query = db.exec_("""select * from teststrati""")
+query.next()
+query.value(0)
+130
+# etc read the documentation of QtSQL
+
+And you can open all the other tables/views (spatial or non spatial) similarly:
+
+db = QSqlDatabase.addDatabase("QPSQL")
+db.setHostName("localhost")
+db.setPort(5432)
+# non spatial table or view
+db.setDatabaseName("people")
+db.setUserName("me")
+db.setPassword("")
+query = QSqlQuery(db)
+query.exec_("select * from people;")
+# etc.
