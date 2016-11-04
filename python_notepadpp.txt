@@ -1,0 +1,6 @@
+
+selecione Run -> Select Run...
+
+entre com o seguinte valor na caixa de texto. 
+
+caminho_python_executavel -i "$(FULL_CURRENT_PATH)"
