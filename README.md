@@ -1,6 +1,7 @@
-# python_qgis
-Automação dos meus trabalhos no QGIS.
+# Usando a instalação do QGIS para rodar python 3
 
+
+## Setar as variáveis de ambiente no windows
 
 ```cmd
 @echo off
@@ -9,8 +10,6 @@ call "%~dp0\bin\o4w_env.bat"
 
 rem List available o4w programs
 rem but only if osgeo4w called without parameters
-
-
 
 call "%OSGEO4W_ROOT%\apps\grass\grass78\etc\env.bat"
 call qt5_env.bat
@@ -40,6 +39,11 @@ set path=%PYTHONUSERBASE%\Python37\Scripts;%path%
 
 @echo on
 @if [%1]==[] (echo run o-help for a list of available commands & cmd.exe /k) else (cmd /c "%*")
+
+```
+
+## Instalar a versão mais atual de PIP for windows
+```cmd
 
 ```
 
