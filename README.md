@@ -42,9 +42,11 @@ set path=%PYTHONUSERBASE%\Python37\Scripts;%path%
 
 ```
 
-## Instalar a versão mais atual de PIP for windows
+## Instalar a versão mais atual de PIP for windows, preferencialmente no modo usuário
 ```cmd
-
+start microsoft-edge:https://bootstrap.pypa.io/get-pip.py
+python  get-pip.py --user
+python -m pip  install --user csvkit
 ```
 
 
